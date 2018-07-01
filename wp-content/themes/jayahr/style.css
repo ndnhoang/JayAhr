@@ -6,3 +6,6 @@ Author URI: http://www.nlstech.net/
 Description: Jay Ahr theme
 Text Domain: nlstech.net
 --------------------------------------------------------------*/
+body {
+	background: #000;
+}
