@@ -186,25 +186,15 @@ if ( ! class_exists( 'jayahr_options' ) ) {
 						'type'     => 'text',
 						'title'    => __( 'Facebook', 'jayahr' ),
 					),
-					array(
-						'id'       => 'google-plus',
-						'type'     => 'text',
-						'title'    => __( 'Goole Plus', 'jayahr' ),
-					),
-					array(
-						'id'       => 'twitter',
-						'type'     => 'text',
-						'title'    => __( 'Twitter', 'jayahr' ),
-					),
-					array(
-						'id'       => 'youtube',
-						'type'     => 'text',
-						'title'    => __( 'Youtube', 'jayahr' ),					
-                    ),
                     array(
 						'id'       => 'instagram',
 						'type'     => 'text',
 						'title'    => __( 'Instagram', 'jayahr' ),					
+                    ),
+                    array(
+						'id'       => 'social-email',
+						'type'     => 'text',
+						'title'    => __( 'Email', 'jayahr' ),					
                     )
 				)
 	    	);

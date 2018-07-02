@@ -1,34 +1,40 @@
 <?php
+// show contact
+add_filter( 'widget_text', 'do_shortcode' );
+add_shortcode('show_contact','show_contact');
+function show_contact(){
+    global $jayahr_option; 
+    $phone  = $jayahr_option['phone'];
+    $email  = $jayahr_option['email'];
+    ob_start();
+    if ($phone || $email) : ?>
+        <ul>
+            <?php if ($phone) : ?>
+                <li><a href=tell:<?php echo $phone; ?>><?php echo $phone; ?></a></li>
+            <?php endif; ?>
+            <?php if ($email) : ?>
+                <li><a href=mailto:<?php echo $email; ?>><?php echo $email; ?></a></li>
+            <?php endif; ?>
+        </ul>
+    <?php endif;
+    $result = ob_get_contents();
+    ob_end_clean();
+    return $result;
+}
 //show socials
 add_shortcode('show_socials_icon','show_socials_icon');
 function show_socials_icon(){
-    global $arrow_option; 
+    global $jayahr_option; 
     ob_start();?>
-    <ul class="socials">
-        <?php if( !empty($arrow_option['facebook']) ): ?>
-        <li><a class="facebook" href="https://facebook.com/<?php echo $arrow_option['facebook'] ?>" target="_blank">
-            <i class="fa fa-facebook" aria-hidden="true"></i>
-        </a></li>
+    <ul>
+        <?php if( !empty($jayahr_option['social-email']) ): ?>
+        <li><a class="email" href="<?php echo $jayahr_option['social-email']; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/email-icon.png'; ?>" alt="email"></a></li>
         <?php endif; ?>
-        <?php if( !empty($arrow_option['google-plus']) ): ?>
-        <li><a class="google" href="https://twitter.com/<?php echo $arrow_option['google-plus'] ?>" target="_blank">
-            <i class="fa fa-google-plus" aria-hidden="true"></i>
-        </a></li>
+        <?php if( !empty($jayahr_option['instagram']) ): ?>
+        <li><a class="instagram" href="<?php echo $jayahr_option['instagram']; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/instagram-icon.png'; ?>" alt="instagram"></a></li>
         <?php endif; ?>
-        <?php if( !empty($arrow_option['twitter']) ): ?>
-        <li><a class="twitter" href="https://twitter.com/<?php echo $arrow_option['twitter'] ?>" target="_blank">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-        </a></li>
-        <?php endif; ?>
-        <?php if( !empty($arrow_option['youtube']) ): ?>
-        <li><a class="youtube" href="https://youtube.com/<?php echo $arrow_option['youtube'] ?>" target="_blank">
-            <i class="fa fa-youtube" aria-hidden="true"></i>
-        </a></li>
-        <?php endif; ?>
-        <?php if( !empty($arrow_option['instagram']) ): ?>
-        <li><a class="instagram" href="https://instagram.com/<?php echo $arrow_option['instagram'] ?>" target="_blank">
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-        </a></li>
+        <?php if( !empty($jayahr_option['facebook']) ): ?>
+        <li><a class="facebook" href="<?php echo $jayahr_option['facebook']; ?>" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/facebook-icon.png'; ?>" alt="facebook"></a></li>
         <?php endif; ?>
     </ul>
     <?php
