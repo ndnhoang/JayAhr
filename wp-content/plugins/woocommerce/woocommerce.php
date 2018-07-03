@@ -12,6 +12,7 @@
  * @package WooCommerce
  */
 
+
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
@@ -40,3 +41,5 @@ function wc() {
 
 // Global for backwards compatibility.
 $GLOBALS['woocommerce'] = wc();
+
+

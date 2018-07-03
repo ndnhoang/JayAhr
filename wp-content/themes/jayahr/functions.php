@@ -62,7 +62,9 @@ add_action( 'widgets_init', 'jayahr_widgets_init' );
 function jayahr_scripts() {		
 	wp_enqueue_style( 'jayahr-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'main.css', get_template_directory_uri().'/css/main.css' );
+	wp_enqueue_style( 'owl.carousel.min.css', get_template_directory_uri().'/css/owl.carousel.min.css' );
 
+	wp_enqueue_script( 'owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js',array('jquery'), '3.8', true );
 	wp_enqueue_script( 'main.js', get_template_directory_uri().'/js/main.js',array('jquery'), '3.8', true );
 }
 add_action( 'wp_enqueue_scripts', 'jayahr_scripts' );
@@ -114,5 +116,18 @@ function get_favicon(){
 //update version acf
 function my_acf_init() {	
 	acf_update_setting('select2_version', 4);	
+	acf_update_setting('google_api_key', 'AIzaSyCO_clusxR8INC6GFw5ivqN1dqDpPvz4lI');
 }
 add_action('acf/init', 'my_acf_init');
+// fix woocommerce lastest
+function mytheme_add_woocommerce_support() {
+add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+// remove hook woocommerce_before_main_content
+remove_action('woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
+remove_action('woocommerce_before_main_content', 'WC_Structured_Data::generate_website_data()', 30);
+// remove hook woocommerce_before_shop_loop
+remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
+remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
