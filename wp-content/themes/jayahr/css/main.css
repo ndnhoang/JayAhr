@@ -378,10 +378,18 @@ main {
 	text-transform: uppercase;
 }
 /* #SIDEBAR PRODUCT*/
+/* PRODUCT CAT */
 .tax-product_cat #content {
 	width: calc(100% - 100px);
 	float: right;
 }
+.tax-product_cat h2.page-title {
+	font-size: 24px;
+	color: #000;
+	text-transform: capitalize;
+	margin-bottom: 95px;
+}
+/* #PRODUCT CAT*/
 /* #MAIN */
 /* FOOTER */
 footer {
@@ -483,8 +491,11 @@ footer .socials li img {
     	letter-spacing: 2px;
     }
 }
+/* #Firefox */
+/* IE 12+ */
 @supports (-ms-ime-align:auto) {
   	.home-sec-2 .sec-content h3 {
 		letter-spacing: -2.1px;
 	}
 }
+/* #IE 12+ */
