@@ -57,3 +57,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@font-face {
+	font-family: South Korea;
+	src: url(fonts/South-Korea.ttf);
+}

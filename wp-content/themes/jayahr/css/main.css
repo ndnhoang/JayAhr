@@ -233,22 +233,28 @@ main {
 }
 .home-sec-1 .sec-content h3, .home-sec-2 .sec-content h3 {
 	font-size: 49px;
+	line-height: 48px;
 	text-transform: uppercase;
 	margin-bottom: 35px;
+	font-family: South Korea;
+	color: #5b5b5b;
 }
 .home-sec-1 .sec-content .desc, .home-sec-2 .sec-content .desc {
 	font-size: 14px;
 	line-height: 25px;
 	color: #959595;
-	margin-bottom: 35px;
+	margin-bottom: 40px;
+	letter-spacing: 2.1px;
+}
+.home-sec-1 .sec-content .desc {
 	letter-spacing: 2px;
 }
 .read-more {
 	display: inline-block;
 	width: 210px;
 	text-align: center;
-	height: 50px;
-	line-height: 50px;
+	height: 56px;
+	line-height: 56px;
 	text-transform: uppercase;
 	border: 3px solid #959595;
 	font-size: 19px;
@@ -256,8 +262,8 @@ main {
 }
 .home-sec-2 {
 	background-position: right;
-	padding-top: 110px;
-	padding-bottom: 100px;
+	padding-top: 115px;
+	padding-bottom: 105px;
 	margin-top: 15px;
 	position: relative;
 }
@@ -274,21 +280,23 @@ main {
 .home-sec-2 .sec-content {
 	width: 505px;
     float: left;
-    padding-left: 50px;
+    padding-left: 30px;
     text-align: right;
 } 
 .home-sec-2 .sec-content h3 {
 	font-size: 63px;
+	line-height: 60px;
 }
 /* #HOME SECTION 1 & 2 */
 /* OFFICIAL */
 .home-official {
-	margin: 60px 0 100px 0;
+	margin: 65px 0 100px 0;
 	text-align: center;
 }
 .home-official h3 {
 	text-align: center;
 	font-size: 32px;
+	line-height: 37px;
 	color: #959595;
 	margin-bottom: 80px;
 }
@@ -321,7 +329,7 @@ main {
 	float: left;
 }
 .home-contact .acf-map {
-	height: 310px;
+	height: 315px;
 	border: 0;
 	margin: 0;
 }
@@ -333,10 +341,11 @@ main {
 	color: #fff;
 }
 .home-contact .information h3 {
+	letter-spacing: -1.9px;
+	font-family: South Korea;
 	font-size: 35px;
 	text-transform: uppercase;
 	margin-bottom: 20px;
-    font-family: monospace;
 }
 .home-contact .information li {
 	margin-bottom: 10px;
@@ -470,4 +479,12 @@ footer .socials li img {
     .home-sec-1 .sec-content .desc, .home-sec-2 .sec-content .desc {
     	letter-spacing: 1.9px;
     }
+    .home-sec-2 .sec-content .desc {
+    	letter-spacing: 2px;
+    }
+}
+@supports (-ms-ime-align:auto) {
+  	.home-sec-2 .sec-content h3 {
+		letter-spacing: -2.1px;
+	}
 }
