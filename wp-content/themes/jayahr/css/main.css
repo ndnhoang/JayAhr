@@ -667,6 +667,78 @@ footer .socials li img {
 	float: left;
 	padding-top: 20px;
 }
+.contact-page .banner {
+	padding: 50px 0 40px 0;
+	text-align: center;
+}
+.contact-page .contact {
+	background: #f8f8f8;
+	padding: 25px 0 115px 0;
+}
+.contact-page .contact h2 {
+	font-size: 26px;
+	color: #545454;
+	font-family: 'Gotham';
+	font-weight: 300;
+	margin-bottom: 80px;
+}
+.contact-page .contact .content {
+	display: flex;
+    align-items: center;
+}
+.contact-page .contact .content .information {
+	width: 240px;
+	float: left;
+}
+.contact-page .list-email span {
+	display: block;
+	font-family: 'Gotham';
+	font-weight: 300;
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.contact-page .list-email a {
+	display: block;
+	font-size: 16px;
+	font-family: 'Gotham';
+	font-weight: 300;
+	font-style: italic;
+}
+.contact-page .list-email .item {
+	color: #545454;
+	margin-bottom: 25px;
+}
+.contact-page .list-email .item:last-child {
+	margin-bottom: 0;
+}
+.contact-page .contact .container {
+	max-width: 770px;
+}
+.contact-page .contact .contact-form {
+	width: calc(100% - 240px);
+	float: left;
+}
+.contact-page .contact .contact-form input, .contact-page .contact .contact-form textarea {
+	width: 530px;
+	box-sizing: border-box;
+	border: 1px solid #ebebeb;
+	height: 32px;
+	color: #545454;
+	font-size: 15px;
+	font-family: 'Gotham';
+	font-weight: 300;
+	padding: 0 10px;
+	outline: none;
+}
+.contact-page .contact .contact-form input {
+	margin-bottom: 10px;
+}
+.contact-page .contact .contact-form textarea {
+	height: 175px;
+	padding: 10px;
+	resize: none;
+}
 /* #CSS PAGE TEMPLATE */
 /* #EDIT CSS WOO*/
 /* Firefox */

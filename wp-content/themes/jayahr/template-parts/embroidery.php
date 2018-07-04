@@ -16,7 +16,7 @@ get_header(); ?>
 		<?php if ($banner) : ?>
 			<div class="page-banner"><img src="<?php echo $banner; ?>" alt="banner"></div>
 		<?php endif; ?>
-		<div class="content" style="background-image: url(<?php echo $bg_bottom; ?>);">
+		<div class="content" style="background-image: url(<?php echo $bg_bottom; ?>); ">
 			<div class="container">
 				<div class="content-left">
 					<h2><?php echo $title; ?></h2>
