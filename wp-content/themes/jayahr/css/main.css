@@ -476,32 +476,6 @@ footer .socials li img {
 	margin-top: 3px;
 }
 /* #FOOTER */
-/* Firefox */
-@-moz-document url-prefix() {
-    .main-menu > li {
-    	margin: 0 38px;
-    }
-    .user-menu {
-    	width: 160px;
-    }
-    #logo {
-    	width: calc(100% - 318px);
-    }
-    .home-sec-1 .sec-content .desc, .home-sec-2 .sec-content .desc {
-    	letter-spacing: 1.9px;
-    }
-    .home-sec-2 .sec-content .desc {
-    	letter-spacing: 2px;
-    }
-}
-/* #Firefox */
-/* IE 12+ */
-@supports (-ms-ime-align:auto) {
-  	.home-sec-2 .sec-content h3 {
-		letter-spacing: -2.1px;
-	}
-}
-/* #IE 12+ */
 /* EDIT CSS WOO */
 .woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
 	width: 290px;
@@ -644,4 +618,89 @@ footer .socials li img {
 .single-product main {
 	padding-bottom: 0;
 }
+/* CSS PAGE TEMPLATE */
+.page-template main {
+	padding: 0;
+}
+.embroidery .page-banner {
+	line-height: 0;
+}
+.embroidery .page-banner img {
+	width: 100%;
+}
+.embroidery .content {
+	padding-top: 65px;
+	padding-bottom: 210px;
+	background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.embroidery .content-left {
+	width: 542px;
+	float: left;
+}
+.embroidery .content h2 {
+	font-family: 'South Korea';
+	font-size: 63px;
+	line-height: 60px;
+	color: #5b5b5b;
+	padding-right: 100px;
+	text-align: right;
+	text-transform: uppercase;
+	letter-spacing: -2.8px;
+	margin-bottom: 70px;
+}
+.embroidery .content .desc {
+	font-size: 14px;
+	color: #959595;
+	letter-spacing: 1.95px;
+	line-height: 26px;
+}
+.embroidery .content .content-left .desc {
+	margin-top: 110px;
+}
+.embroidery .content .desc p {
+	margin-bottom: 25px;
+}
+.embroidery .content-right {
+	width: calc(100% - 542px);
+	padding-left: 49px;
+	float: left;
+	padding-top: 20px;
+}
+/* #CSS PAGE TEMPLATE */
 /* #EDIT CSS WOO*/
+/* Firefox */
+@-moz-document url-prefix() {
+    .main-menu > li {
+    	margin: 0 38px;
+    }
+    .user-menu {
+    	width: 160px;
+    }
+    #logo {
+    	width: calc(100% - 318px);
+    }
+    .home-sec-1 .sec-content .desc, .home-sec-2 .sec-content .desc {
+    	letter-spacing: 1.9px;
+    }
+    .home-sec-2 .sec-content .desc {
+    	letter-spacing: 2px;
+    }
+    .embroidery .content .desc {
+    	letter-spacing: 1.84px;
+    }
+}
+/* #Firefox */
+/* IE 12+ */
+@supports (-ms-ime-align:auto) {
+  	.home-sec-2 .sec-content h3 {
+		letter-spacing: -2.1px;
+	}
+	.embroidery .content .desc {
+    	letter-spacing: 1.88px;
+    }
+    .embroidery .content h2 {
+    	letter-spacing: -4.9px;
+    }
+}
+/* #IE 12+ */
