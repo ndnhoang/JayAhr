@@ -131,3 +131,79 @@ remove_action('woocommerce_before_main_content', 'WC_Structured_Data::generate_w
 // remove hook woocommerce_before_shop_loop
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30);
+/**
+ * Change number of products that are displayed per page (shop page)
+ */
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+function new_loop_shop_per_page( $cols ) {
+  $cols = 17;
+  return $cols;
+}
+/**
+ * Change number or products per row to 3
+ */
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3;
+	}
+}
+// change product display
+remove_action('woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10);
+if (!function_exists('woocommerce_custom_template_loop_product_title')) {
+	function woocommerce_custom_template_loop_product_title() {
+		echo '<h4><a href="'.get_the_permalink().'">'.get_the_title().'</a></h4>';
+	}
+}
+if (!function_exists('woocommerce_custom_template_loop_product_attributes')) {
+	function woocommerce_custom_template_loop_product_attributes() {
+		$product = wc_get_product();
+		$attributes = $product->get_attributes();
+		$categories = get_the_terms($product->id, 'product_cat');
+		echo '<table class="attributes">';
+		if ($categories) {
+			$cat_links = array();
+			foreach ($categories as $item) {
+				$cat_links[] = '<a href="'.get_term_link($item).'">'.$item->name.'</a>';
+			}
+			$cat_links = implode(', ', $cat_links);
+			echo '<tr><td class="name">Type</td><td class="value">'.$cat_links.'</td></tr>';
+		}
+		if ($attributes) {
+			foreach ($attributes as $item) {
+				$attribute_name = get_taxonomy($item['name']);
+				$attribute_name = $attribute_name->labels->singular_name;
+				$attribute = $product->get_attribute($item['name']);
+				echo '<tr>';
+				echo '<td class="name">'.$attribute_name.'</td><td class="value">'.$attribute.'</td>';
+				echo '</tr>';
+			}
+		}
+		echo '</table>';
+	}
+}
+add_action('woocommerce_shop_loop_item_title', 'woocommerce_custom_template_loop_product_title', 10);
+add_action('woocommerce_shop_loop_item_title', 'woocommerce_custom_template_loop_product_attributes', 20);
+remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
+remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
+if (!function_exists('woocommerce_custom_template_loop_product_thumbnail_open')) {
+	function woocommerce_custom_template_loop_product_thumbnail_open() {
+		echo '<div class="thumb"><a href="'.get_the_permalink().'">';
+	}
+}
+if (!function_exists('woocommerce_custom_template_loop_product_thumbnail_close')) {
+	function woocommerce_custom_template_loop_product_thumbnail_close() {
+		echo '</a></div>';
+	}
+}
+add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_custom_template_loop_product_thumbnail_open', 5);
+add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_custom_template_loop_product_thumbnail_close', 15);
+// remove pagination
+remove_action('woocommerce_after_shop_loop', 'woocommerce_pagination', 10);
+if (!function_exists('woocommerce_custom_loadmore')) {
+	function woocommerce_custom_loadmore() {
+		echo '<div class="load-more"><a class="read-more" href="#">Load more</a></div>';
+	}
+}
+add_action('woocommerce_after_shop_loop', 'woocommerce_custom_loadmore', 10);
