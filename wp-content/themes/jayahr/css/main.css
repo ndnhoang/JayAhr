@@ -532,23 +532,116 @@ footer .socials li img {
 	font-size: 24px;
 	color: #5d5d5d;
 }
-.woocommerce ul.products.columns-3 li.product .attributes, .woocommerce-page ul.products.columns-3 li.product .attributes {
+.attributes {
 	text-align: left;
     margin-left: 45px;
     color: #8d8d8d;
     font-size: 10px;
 }
-.woocommerce ul.products.columns-3 li.product .attributes .name, .woocommerce-page ul.products.columns-3 li.product .attributes .name {
+.attributes .code {
+	display: none;
+}
+.attributes .name {
 	font-size: 8px;
 	text-transform: uppercase;
 	width: 40px;
 	border-right: 1px solid #b7b7b7;
 }
-.woocommerce ul.products.columns-3 li.product .attributes .value, .woocommerce-page ul.products.columns-3 li.product .attributes .value {
+.attributes .value {
 	padding-left: 10px;
 	padding-bottom: 3px;
 }
-.woocommerce ul.products.columns-3 li.product .attributes tr:last-child .value, .woocommerce-page ul.products.columns-3 li.product .attributes tr:last-child .value {
+.attributes tr:last-child .value {
+	padding-bottom: 0;
+}
+.woocommerce div.product div.summary {
+	float: none;
+	width: 100%;
+	position: relative;
+	padding-top: 15px;
+}
+.woocommerce div.product .product_title {
+	font-family: 'Gotham';
+	font-weight: 300;
+	font-size: 46px;
+	color: #5d5d5d;
+	padding-left: 75px;
+}
+.woocommerce div.product div.summary .go-back {
+	position: absolute;
+    top: 28px;
+    left: 0;
+}
+.woocommerce div.product div.summary .close {
+	position: absolute;
+    top: 28px;
+   	right: 0;
+}
+.woocommerce div.product div.images.woocommerce-product-gallery {
+	width: 100%;
+	float: none;
+}
+.single-product .information {
+	background: #f6f6f6;
+	padding: 40px 0;
+}
+.single-product .information .container {
+	text-align: center;
+}
+.single-product .information .content {
+	display: inline-flex;
+}
+.single-product .information .content > div {
+	padding: 7px 35px 20px 35px;
+	border-right: 1px solid #b7b7b7;
+}
+.single-product .information .content > div:last-child {
+	border-right: 0;
+}
+.single-product .information .content .excerpt {
+	width: 360px;
+	display: inline-block;
+	text-align: left;
+	font-size: 10px;
+	color: #8d8d8d;
+	line-height: 12px;
+	letter-spacing: 0.36px;
+}
+.single-product .attributes {
+	margin: 0;
+}
+.single-product .attributes .code {
+	display: table-row;
+}
+.single-product .attributes .name {
+	border-right: 0;
+}
+.single-product .attributes .value {
+	padding-left: 15px;
+	letter-spacing: 0.4px;
+}
+.single-product .information .price .value {
+	font-family: 'Gotham Extra';
+	font-size: 28px;
+	color: #000;
+	font-weight: 300;
+	margin-bottom: 20px;
+}
+.single-product .information .price .add-cart a {
+	font-family: 'South Korea';
+	font-size: 15px;
+	color: #fff;
+	display: inline-block;
+	height: 30px;
+	line-height: 32px;
+	width: 150px;
+	text-transform: uppercase;
+	background: #a6a6a6;
+	border-radius: 0;
+	padding: 0;
+	font-weight: 400;
+}
+.single-product main {
 	padding-bottom: 0;
 }
 /* #EDIT CSS WOO*/
