@@ -7,14 +7,19 @@
  */
 get_header(); ?>
 	<!-- HOME SLIDER -->
-	<div class="home-slider">
-		<div class="owl-carousel">
-			<div class="item"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/blacksmith.jpg'; ?>" alt="blacksmith"></a></div>
-			<div class="item"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/massad.jpg'; ?>" alt="massad"></a></div>
-			<div class="item"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/apollo.jpg'; ?>" alt="apollo"></a></div>
-			<div class="item"><a href="#" target="_blank"><img src="<?php echo get_stylesheet_directory_uri().'/images/armored-battalion.jpg'; ?>" alt="armored-battalion"></a></div>
-		</div>
-	</div> 
+	<?php if (have_rows('slider')) : ?>
+		<div class="home-slider">
+			<div class="owl-carousel">
+				<?php while (have_rows('slider')) : 
+					the_row();
+					$image = get_sub_field('image');
+					$link = get_sub_field('link');
+					?>
+					<div class="item"><a href="<?php echo ($link) ? $link : '#'; ?>" target="_blank"><img src="<?php echo $image; ?>" alt=""></a></div>
+				<?php endwhile; ?>
+			</div>
+		</div> 
+	<?php endif; ?>
 	<!-- #HOME SLIDER -->
 	<!-- HOME SECTION 1 -->
 	<?php if (have_rows('section_1')) :
