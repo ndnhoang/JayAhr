@@ -480,7 +480,7 @@ footer .socials li img {
 .woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
 	width: 290px;
 	margin-right: 27px;
-	margin-bottom: 50px;
+	margin-bottom: 45px;
 	text-align: center;
 }
 .woocommerce ul.products.columns-3 li.product:nth-child(3n), .woocommerce-page ul.products.columns-3 li.product:nth-child(3n) {
@@ -511,6 +511,7 @@ footer .socials li img {
     margin-left: 45px;
     color: #8d8d8d;
     font-size: 10px;
+    margin-bottom: 5px;
 }
 .attributes .code {
 	display: none;
@@ -618,6 +619,33 @@ footer .socials li img {
 .single-product main {
 	padding-bottom: 0;
 }
+.woocommerce ul.products.columns-3 li.product.outofstock, .woocommerce-page ul.products.columns-3 li.product.outofstock {
+	position: relative;
+}
+.woocommerce ul.products.columns-3 li.product.outofstock:before, .woocommerce-page ul.products.columns-3 li.product.outofstock:before {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background: #fff;
+	opacity: 0.8;
+}
+.woocommerce ul.products.columns-3 li.product.outofstock:after, .woocommerce-page ul.products.columns-3 li.product.outofstock:after {
+	position: absolute;
+	content: "SOLD";
+	left: 0;
+	top: 95px;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	font-family: 'Gotham';
+    font-weight: 300;
+    font-size: 35px;
+    color: #545454;
+}
+/* #EDIT CSS WOO*/
 /* CSS PAGE TEMPLATE */
 .page-template main {
 	padding: 0;
@@ -739,8 +767,261 @@ footer .socials li img {
 	padding: 10px;
 	resize: none;
 }
+.editorial {
+	background: #0c0c0c;
+	padding-top: 58px;
+}
+.editorial .container {
+	width: 1227px;
+	max-width: 100%;
+}
+.list-editorial .item {
+	width: 100%;
+	float: left;
+	font-size: 0;
+}
+.list-editorial .item .content {
+	width: 100%;
+	float: left;
+	height: 170px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+}
+.list-editorial .item .content-left {
+	width: 425px;
+	float: left;
+	padding: 0 70px 0 20px;
+	color: #fff;
+}
+.list-editorial .item .content-right {
+	width: calc(100% - 425px);
+	float: left;
+	padding-right: 75px;
+	color: #a7a7a7;
+	font-family: 'Gotham';
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 19px;
+}
+.list-editorial .item h3 {
+	font-size: 60px;
+	line-height: 52px;
+	font-family: 'South Korea';
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+.list-editorial .item h5 {
+	font-size: 17px;
+	line-height: 18px;
+	font-family: 'Gotham Book';
+	border-left: 16px solid #bc2a20;
+	padding-left: 10px;
+}
+.list-editorial .item:last-child .thumb {
+	height: 470px;
+	overflow: hidden;
+}
+.story {
+	padding-top: 90px;
+}
+.story .content-left {
+	width: 412px;
+	float: left;
+	padding-right: 75px;
+}
+.story .content-right {
+	width: calc(100% - 412px);
+	float: left;
+}
+.story .introduction {
+	color: #000;
+	margin-bottom: 5px;
+	width: 100%;
+	float: left;
+}
+.story .introduction h3 {
+	font-family: 'Gotham Extra';
+	font-weight: 300;
+	font-size: 30px;
+	margin-bottom: 25px;
+}
+.story .introduction .description {
+	font-size: 12px;
+	letter-spacing: -0.21px;
+	line-height: 19px
+}
+.story .introduction .description p {
+	margin-bottom: 25px;
+}
+.story .timeline {
+	width: 100%;
+	float: left;
+	padding-bottom: 580px;
+}
+.story .timeline h3 {
+	width: 412px;
+	padding-right: 75px;
+	text-align: right;
+	font-family: 'Gotham Extra';
+	font-weight: 300;
+	margin-top: 50px;
+	margin-bottom: 80px;
+	color: #000;
+	font-size: 65px;
+}
+.story .timeline .item {
+	text-align: right;
+	padding-right: 35px;
+	font-size: 21px;
+	font-family: 'Gotham';
+	font-weight: 300;
+	color: #000;
+	position: relative;
+	width: 100%;
+	min-height: 125px;
+    display: flex;
+}
+.story .timeline .first {
+	text-align: right;
+	padding-right: 35px;
+	position: relative;
+	width: 100%;
+	height: 150px;
+	display: flex;
+}
+.story .timeline .item .content-left, .story .timeline .first .content-left {
+	position: relative;
+}
+.story .timeline .item .content-left:before, .story .timeline .first .content-left:before {
+	position: absolute;
+	content: "";
+	top: 0;
+	right: 75px;
+	bottom: 0;
+	width: 3px;
+	background: #a6a6a6;
+}
+.story .timeline .item:last-child .content-left:before {
+	content: none;
+}
+.story .timeline .item .content-left .time {
+	display: inline-block;
+	padding-right: 35px;
+}
+.story .timeline .item:first-child:after {
+	content: "";
+	position: absolute;
+	right: 64px;
+	top: -25px;
+	border-radius: 50%;
+	width: 24px;
+	height: 24px;
+	background: #a6a6a6;
+}
+.story .timeline .circle {
+	position: absolute;
+	right: 64px;
+	top: -2px;
+	border-radius: 50%;
+	border: 3px solid #a6a6a6;
+	width: 24px;
+	height: 24px;
+	background: #fff;
+}
+.story .timeline .first .circle {
+	border: 0;
+	background: #a6a6a6;
+}
+.story .timeline .thumb {
+	width: 53px;
+    height: 53px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 6px solid #a6a6a6;
+    position: relative;
+    box-sizing: initial;
+    top: -21px;
+}
+.story .timeline .thumb:before {
+	position: absolute;
+	content: "";
+	width: 0; 
+  	height: 0; 
+  	border-top: 12px solid transparent;
+  	border-bottom: 12px solid transparent; 
+  	border-right: 12px solid #a6a6a6; 
+  	left: -18px;
+    top: 14px;
+}
+.story .timeline .active .circle:after {
+	position: absolute;
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #404040;
+	top: 3px;
+	left: 3px;
+}
+.story .timeline .active .thumb {
+	display: none;
+}
+.story .timeline .information {
+	display: none;
+	position: relative;
+	width: 575px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+.story .timeline .active .information {
+	display: block;
+}
+.story .timeline .information .image {
+	width: 100%;
+	height: 323px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+    top: -339px;
+    left: 0;
+}
+.story .timeline .information h4 {
+	font-family: 'Gotham Extra';
+	font-weight: 300;
+	color: #fff;
+	font-size: 30px;
+	background: #272727;
+	text-align: center;
+	line-height: 36px;
+	padding: 10px 0;
+	position: relative;
+	top: -16px;
+}
+.story .timeline .information h4:before {
+	position: absolute;
+	content: "";
+	width: 0; 
+  	height: 0; 
+  	border-top: 12px solid transparent;
+  	border-bottom: 12px solid transparent; 
+  	border-right: 12px solid #272727; 
+  	left: -12px;
+    top: 16px;
+}
+.story .timeline .information .description {
+	font-family: Arial;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: 400;
+	color: #737373;
+	letter-spacing: 0.9px;
+    line-height: 17px;
+}
+.story .timeline .item .circle {
+	cursor: pointer;
+}
 /* #CSS PAGE TEMPLATE */
-/* #EDIT CSS WOO*/
 /* Firefox */
 @-moz-document url-prefix() {
     .main-menu > li {
@@ -760,6 +1041,15 @@ footer .socials li img {
     }
     .embroidery .content .desc {
     	letter-spacing: 1.84px;
+    }
+    .list-editorial .item .content-right {
+    	padding-right: 78px;
+    }
+    .story .introduction .description {
+    	letter-spacing: -0.35px;
+    }
+    .story .timeline .information .description {
+    	letter-spacing: 0.85px;
     }
 }
 /* #Firefox */

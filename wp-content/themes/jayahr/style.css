@@ -77,3 +77,8 @@ table {
 	src: url(fonts/Gotham-Extra-Light.otf);
 	font-weight: 300;
 }
+@font-face {
+	font-family: Gotham Book;
+	src: url(fonts/GothamBook.ttf);
+	font-weight: 400;
+}

@@ -221,16 +221,20 @@ if (!function_exists('woocommerce_custom_single_meta')) {
 		echo '<div class="information">';
 		echo '<div class="container">';
 		echo '<div class="content">';
-		echo '<div class="excerpt">'.get_the_excerpt().'</div>';
+		if (get_the_excerpt()) {
+			echo '<div class="excerpt">'.get_the_excerpt().'</div>';	
+		}
 		echo '<div class="meta">';
 		woocommerce_custom_template_loop_product_attributes();
 		echo '</div>';
-		echo '<div class="price">';
-		echo '<div class="value">'.get_woocommerce_currency_symbol($current).' '.wc_get_product(get_the_ID())->get_price().'</div>';
-		echo '<div class="add-cart">';
-		woocommerce_template_loop_add_to_cart();
-		echo '</div>';
-		echo '</div>';
+		if (wc_get_product(get_the_ID())->get_price()) {
+			echo '<div class="price">';
+			echo '<div class="value">'.get_woocommerce_currency_symbol($current).' '.wc_get_product(get_the_ID())->get_price().'</div>';
+			echo '<div class="add-cart">';
+			woocommerce_template_loop_add_to_cart();
+			echo '</div>';
+			echo '</div>';
+		}
 		echo '</div>';
 		echo '</div>';
 		echo '</div>';
