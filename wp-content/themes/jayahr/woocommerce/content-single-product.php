@@ -56,6 +56,7 @@ if ( post_password_required() ) {
 			 *
 			 * @hooked woocommerce_show_product_sale_flash - 10
 			 * @hooked woocommerce_show_product_images - 20
+			 * @hooked woocommerce_custom_show_product_images - 20
 			 */
 			do_action( 'woocommerce_before_single_product_summary' );
 		?>
