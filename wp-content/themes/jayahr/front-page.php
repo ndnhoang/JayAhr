@@ -99,7 +99,7 @@ get_header(); ?>
 			<div class="home-contact" style="background-image: url(<?php echo $background; ?>)">
 				<div class="container">
 					<div class="map">
-						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCO_clusxR8INC6GFw5ivqN1dqDpPvz4lI"></script>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9pVsP-Sh5vKDOU_6mGP3weZYs9qsX2wE"></script>
 						<script type="text/javascript">
 						(function($) {
 						function new_map( $el ) {

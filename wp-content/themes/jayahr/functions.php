@@ -61,8 +61,9 @@ add_action( 'widgets_init', 'jayahr_widgets_init' );
 //enqueue scripts
 function jayahr_scripts() {		
 	wp_enqueue_style( 'jayahr-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'main.css', get_template_directory_uri().'/css/main.css' );
 	wp_enqueue_style( 'owl.carousel.min.css', get_template_directory_uri().'/css/owl.carousel.min.css' );
+	wp_enqueue_style( 'main.css', get_template_directory_uri().'/css/main.css' );
+	wp_enqueue_style( 'responsive.css', get_template_directory_uri().'/css/responsive.css' );
 
 	wp_enqueue_script( 'owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js',array('jquery'), '3.8', true );
 	wp_enqueue_script( 'main.js', get_template_directory_uri().'/js/main.js',array('jquery'), '3.8', true );
@@ -116,7 +117,7 @@ function get_favicon(){
 //update version acf
 function my_acf_init() {	
 	acf_update_setting('select2_version', 4);	
-	acf_update_setting('google_api_key', 'AIzaSyCO_clusxR8INC6GFw5ivqN1dqDpPvz4lI');
+	acf_update_setting('google_api_key', 'AIzaSyD9pVsP-Sh5vKDOU_6mGP3weZYs9qsX2wE');
 }
 add_action('acf/init', 'my_acf_init');
 // fix woocommerce lastest
