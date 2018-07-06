@@ -4,6 +4,10 @@
  * @author NLS Team
  * @package jayahr
  */
+
+update_option( 'siteurl', 'http://192.168.0.117/jayahr/' );
+update_option( 'home', 'http://192.168.0.117/jayahr/' );
+
 if ( ! function_exists( 'jayahr_setup' ) ) :
 	function jayahr_setup() {
 		add_theme_support( 'automatic-feed-links' );
@@ -116,7 +120,7 @@ function get_favicon(){
 //update version acf
 function my_acf_init() {	
 	acf_update_setting('select2_version', 4);	
-	acf_update_setting('google_api_key', 'AIzaSyCO_clusxR8INC6GFw5ivqN1dqDpPvz4lI');
+	acf_update_setting('google_api_key', 'AIzaSyD9pVsP-Sh5vKDOU_6mGP3weZYs9qsX2wE');
 }
 add_action('acf/init', 'my_acf_init');
 // fix woocommerce lastest
