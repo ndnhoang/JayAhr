@@ -59,26 +59,41 @@ table {
 }
 @font-face {
 	font-family: South Korea;
-	src: url(fonts/South-Korea.ttf);
+	src: url(fonts/South-Korea.eot);
+	src: url(fonts/South-Korea.woff) format('woff'),
+		 url(fonts/South-Korea.ttf) format('truetype'),
+		 url(fonts/South-Korea.svg) format('svg');
 }
 @font-face {
 	font-family: Gotham;
-	src: url(fonts/GothamLight.ttf);
+	src: url(fonts/GothamLight.eot);
+	src: url(fonts/GothamLight.woff) format('woff'),
+		 url(fonts/GothamLight.ttf) format('truetype'),
+		 url(fonts/GothamLight.svg) format('svg');
 	font-weight: 300;
 }
 @font-face {
 	font-family: Gotham;
-	src: url(fonts/GothamLightItalic.ttf);
+	src: url(fonts/GothamLightItalic.eot);
+	src: url(fonts/GothamLightItalic.woff) format('woff'),
+		 url(fonts/GothamLightItalic.ttf) format('truetype'),
+		 url(fonts/GothamLightItalic.svg) format('svg');
 	font-weight: 300;
 	font-style: italic;
 }
 @font-face {
 	font-family: Gotham Extra;
-	src: url(fonts/Gotham-Extra-Light.otf);
+	src: url(fonts/Gotham-Extra-Light.eot);
+	src: url(fonts/Gotham-Extra-Light.woff) format('woff'),
+		 url(fonts/Gotham-Extra-Light.ttf) format('truetype'),
+		 url(fonts/Gotham-Extra-Light.svg) format('svg');
 	font-weight: 300;
 }
 @font-face {
 	font-family: Gotham Book;
-	src: url(fonts/GothamBook.ttf);
+	src: url(fonts/GothamBook.eot);
+	src: url(fonts/GothamBook.woff) format('woff'),
+		 url(fonts/GothamBook.ttf) format('truetype'),
+		 url(fonts/GothamBook.svg) format('svg');
 	font-weight: 400;
 }
