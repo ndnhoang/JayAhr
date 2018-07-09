@@ -228,14 +228,14 @@ if (!function_exists('woocommerce_custom_single_meta')) {
 		echo '<div class="meta">';
 		woocommerce_custom_template_loop_product_attributes();
 		echo '</div>';
+		echo '<div class="price">';
 		if (wc_get_product(get_the_ID())->get_price()) {
-			echo '<div class="price">';
 			echo '<div class="value">'.wc_price(wc_get_product(get_the_ID())->get_price()).'</div>';
-			echo '<div class="add-cart">';
-			woocommerce_template_loop_add_to_cart();
-			echo '</div>';
-			echo '</div>';
 		}
+		echo '<div class="add-cart">';
+		woocommerce_template_loop_add_to_cart();
+		echo '</div>';
+		echo '</div>';
 		echo '</div>';
 		echo '</div>';
 		echo '</div>';
@@ -292,3 +292,19 @@ if (!function_exists('woocommerce_custom_show_product_images')) {
 	}
 }
 add_action('woocommerce_before_single_product_summary', 'woocommerce_custom_show_product_images', 20);
+// Change 'add to cart' text on single product page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_single_add_to_cart_text' ); 
+function woo_custom_single_add_to_cart_text() { 
+    return __( 'Add to list', 'woocommerce' ); 
+}
+// Change 'view cart' text on single product page
+add_filter( 'gettext', 'my_text_strings', 20, 3 );
+function my_text_strings( $translated_text, $text, $domain ) {
+	switch ( $translated_text ) {
+		case 'View cart':
+			$translated_text = __( 'View list', 'woocommerce' );
+			break;
+		}
+	return $translated_text;
+}
+add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
