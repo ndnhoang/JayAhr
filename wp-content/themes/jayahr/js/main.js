@@ -74,4 +74,12 @@ jQuery(document).ready(function($){
         $('.carousel-gallery .owl-carousel').trigger('to.owl.carousel', item);
         $('.gallery-product .image > img').attr('src', image_medium);
     });
+    // menu mobi
+    $('#menu_mobi .bars').on('click', function() {
+        $('.menu-mobi').addClass('open');
+    });
+    $('#menu_mobi .menu-close').on('click', function() {
+        $('.menu-mobi').removeClass('open');
+    });
+    $('.menu-mobi li.menu-item-has-children').prepend('<span class="plus-menu"></span>');
 });

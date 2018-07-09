@@ -65,8 +65,9 @@ add_action( 'widgets_init', 'jayahr_widgets_init' );
 //enqueue scripts
 function jayahr_scripts() {		
 	wp_enqueue_style( 'jayahr-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'main.css', get_template_directory_uri().'/css/main.css' );
 	wp_enqueue_style( 'owl.carousel.min.css', get_template_directory_uri().'/css/owl.carousel.min.css' );
+	wp_enqueue_style( 'main.css', get_template_directory_uri().'/css/main.css' );
+	wp_enqueue_style( 'responsive.css', get_template_directory_uri().'/css/responsive.css' );
 
 	wp_enqueue_script( 'owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js',array('jquery'), '3.8', true );
 	wp_enqueue_script( 'main.js', get_template_directory_uri().'/js/main.js',array('jquery'), '3.8', true );
@@ -231,14 +232,14 @@ if (!function_exists('woocommerce_custom_single_meta')) {
 		echo '<div class="meta">';
 		woocommerce_custom_template_loop_product_attributes();
 		echo '</div>';
+		echo '<div class="price">';
 		if (wc_get_product(get_the_ID())->get_price()) {
-			echo '<div class="price">';
 			echo '<div class="value">'.wc_price(wc_get_product(get_the_ID())->get_price()).'</div>';
-			echo '<div class="add-cart">';
-			woocommerce_template_loop_add_to_cart();
-			echo '</div>';
-			echo '</div>';
 		}
+		echo '<div class="add-cart">';
+		woocommerce_template_loop_add_to_cart();
+		echo '</div>';
+		echo '</div>';
 		echo '</div>';
 		echo '</div>';
 		echo '</div>';
@@ -295,3 +296,19 @@ if (!function_exists('woocommerce_custom_show_product_images')) {
 	}
 }
 add_action('woocommerce_before_single_product_summary', 'woocommerce_custom_show_product_images', 20);
+// Change 'add to cart' text on single product page
+add_filter( 'woocommerce_product_add_to_cart_text', 'woo_custom_single_add_to_cart_text' ); 
+function woo_custom_single_add_to_cart_text() { 
+    return __( 'Add to list', 'woocommerce' ); 
+}
+// Change 'view cart' text on single product page
+add_filter( 'gettext', 'my_text_strings', 20, 3 );
+function my_text_strings( $translated_text, $text, $domain ) {
+	switch ( $translated_text ) {
+		case 'View cart':
+			$translated_text = __( 'View list', 'woocommerce' );
+			break;
+		}
+	return $translated_text;
+}
+add_filter( 'woocommerce_cart_needs_payment', '__return_false' );

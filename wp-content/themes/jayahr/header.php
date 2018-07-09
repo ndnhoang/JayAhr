@@ -20,6 +20,21 @@ $logo  = $jayahr_option['logo-image'];
     <div id="wrapper">
       <header>
         <div class="top-bar">
+          <div id="menu_mobi">
+            <div class="bars"><img src="<?php echo get_stylesheet_directory_uri().'/images/bars.png'; ?>" alt="menu-mobi"></div>
+            <div class="menu-mobi">
+              <ul>
+                <span class="menu-close"><img src="<?php echo get_stylesheet_directory_uri().'/images/close-icon.png' ?>" alt="close"></span>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">0 Items</a></li>
+                <li><a href="#">Login</a></li>
+              </ul>
+              <?php wp_nav_menu( array(
+                   'theme_location' => 'primary',
+                   'menu_class' => ''
+              ) ); ?>
+            </div>
+          </div>
           <div class="container">
             <ul class="user-menu">
               <li><a href="#">Shop</a></li>

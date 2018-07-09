@@ -44,6 +44,9 @@ header {
 .container:after {
 	clear: both;
 }
+#menu_mobi {
+	display: none;
+}
 .top-bar {
 	padding-bottom: 25px;
 }
@@ -454,6 +457,9 @@ footer .socials {
 }
 footer .socials ul {
 	margin-right: 85px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
 }
 footer .socials li {
 	display: inline-flex;
@@ -466,7 +472,7 @@ footer .socials li {
     float: right;
     border-radius: 5px;
 }
-footer .socials li:first-child {
+footer .socials li:last-child {
 	margin-right: 0;
 }
 footer .socials li:hover {
