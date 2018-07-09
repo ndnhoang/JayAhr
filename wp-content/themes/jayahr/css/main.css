@@ -7,6 +7,7 @@ body {
 a, a:hover, a:focus {
 	text-decoration: none;
 	outline: none;
+	transition: all 0.2s linear;
 }
 strong, b {
 	font-weight: 700;
@@ -137,7 +138,7 @@ header {
 .main-menu > li:hover > a {
 	color: #fff;
 }
-.main-menu > li > a:hover:before {
+.main-menu > li > a:before {
 	position: absolute;
 	content: "";
 	width: 100%;
@@ -145,6 +146,11 @@ header {
 	background: #1b1b1b;
 	bottom: -4px;
 	left: 0;
+	transform: scale(0);
+	transition: transform 0.2s ease-in-out;
+}
+.main-menu > li > a:hover:before {
+	transform: scale(1);
 }
 .main-menu .sub-menu {
 	position: absolute;
