@@ -23,6 +23,12 @@ $logo  = $jayahr_option['logo-image'];
           <div id="menu_mobi">
             <div class="bars"><img src="<?php echo get_stylesheet_directory_uri().'/images/bars.png'; ?>" alt="menu-mobi"></div>
             <div class="menu-mobi">
+              <div class="search-form">
+                <form method="get" action="">
+                  <input type="text" name="s">
+                  <button type="submit"><img src="<?php echo get_stylesheet_directory_uri().'/images/search-icon.png' ?>" alt=""></button>
+                </form>
+              </div>
               <ul>
                 <span class="menu-close"><img src="<?php echo get_stylesheet_directory_uri().'/images/close-icon.png' ?>" alt="close"></span>
                 <li><a href="#">Shop</a></li>

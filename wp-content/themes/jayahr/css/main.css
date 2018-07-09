@@ -11,6 +11,9 @@ a, a:hover, a:focus {
 strong, b {
 	font-weight: 700;
 }
+img {
+	max-width: 100%;
+}
 .acf-map {
 	width: 100%;
 	height: 400px;
@@ -548,6 +551,7 @@ footer .socials li img {
 	font-size: 46px;
 	color: #5d5d5d;
 	padding-left: 75px;
+	padding-right: 50px;
 }
 .woocommerce div.product div.summary .go-back {
 	position: absolute;
@@ -976,6 +980,9 @@ footer .socials li img {
 	width: 100%;
 	min-height: 125px;
     display: flex;
+}
+.story .timeline .item .pre-active {
+	padding-bottom: 375px;
 }
 .story .timeline .first {
 	text-align: right;
