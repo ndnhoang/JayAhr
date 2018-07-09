@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 ?>
 <div class="container">
-	<div class="sidebar">
+	<div class="sidebar-product">
 		<?php $arr_child = get_terms('product_cat', array(
 			'hide_empty' => false,
 			'parent' => get_queried_object()->term_id

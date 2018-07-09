@@ -365,35 +365,36 @@ main {
 }
 /* #HOME CONTACT */
 /* #OFFICIAL */
-/* SIDEBAR PRODUCT */
-.tax-product_cat .sidebar {
+/* sidebar-product PRODUCT */
+.sidebar-product {
 	width: 100px;
 	float: left;
 	padding-right: 20px;
 }
-.sidebar .list-cat li {
-	padding: 10px 0;
+.sidebar-product .list-cat li {
+	padding: 8px 0;
 	border-bottom: 1px solid #828282;
 	padding-left: 7px;
 }
-.sidebar .list-cat li:first-child {
+.sidebar-product .list-cat li:first-child {
 	padding-top: 0;
 }
-.sidebar .list-cat li:last-child {
+.sidebar-product .list-cat li:last-child {
 	padding-bottom: 0;
 	border-bottom: 0;
 }
-.sidebar .list-cat li a {
+.sidebar-product .list-cat li a {
 	color: #757575;
 	text-transform: uppercase;
+	line-height: 12px;
 }
-/* #SIDEBAR PRODUCT*/
+/* #sidebar-product PRODUCT*/
 /* PRODUCT CAT */
-.tax-product_cat #content {
+#content {
 	width: 925px;
 	float: left;
 }
-.tax-product_cat h2.page-title {
+h2.page-title {
 	font-size: 24px;
 	color: #000;
 	margin-bottom: 95px;

@@ -55,7 +55,7 @@
 	.home-contact .map {
 		width: 500px;
 	}
-	.tax-product_cat #content {
+	#content {
 		width: calc(100% - 100px);
 	}
 	.woocommerce ul.products.columns-3 li.product, .woocommerce-page ul.products.columns-3 li.product {
@@ -295,12 +295,12 @@
 		margin-right: 5%;
 		margin-bottom: 30px;
 	}
-	.tax-product_cat .sidebar {
+	.sidebar-product {
 		width: 100%;
 		margin-bottom: 30px;
 		padding-right: 0;
 	}
-	.tax-product_cat #content {
+	#content {
 		width: 100%;
 	}
 	.woocommerce ul.products li.product .thumb {

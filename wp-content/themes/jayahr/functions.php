@@ -308,7 +308,16 @@ function my_text_strings( $translated_text, $text, $domain ) {
 		case 'View cart':
 			$translated_text = __( 'View list', 'woocommerce' );
 			break;
+		case 'Update cart':
+			$translated_text = __('Update list', 'woocommerce');
 		}
 	return $translated_text;
 }
 add_filter( 'woocommerce_cart_needs_payment', '__return_false' );
+//update item in cart
+add_filter( 'woocommerce_add_to_cart_fragments', 'iconic_cart_count_fragments', 10, 1 );
+ 
+function iconic_cart_count_fragments( $fragments ) {   
+    $fragments['.item-cart'] = '<span class="item-cart">' . WC()->cart->get_cart_contents_count() . '</span>';    
+    return $fragments;   
+}
