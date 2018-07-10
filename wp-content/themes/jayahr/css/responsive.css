@@ -265,6 +265,7 @@
 	}
 	.menu-mobi li.menu-item-has-children {
 		position: relative;
+		padding-right: 30px;
 	}
 	.plus-menu {
 		background: url('../images/plus-icon.png');
@@ -432,6 +433,9 @@
 		float: none;
 		width: 200px;
 		margin: 20px 0;
+	}
+	.woocommerce-additional-fields {
+		margin-top: 20px;
 	}
 }
 @media screen and (max-width: 736px) {
