@@ -883,9 +883,10 @@
 		line-height: 26px;
 	}
 	.home-official .gallery .item {
-		width: 100%;
+		width: 90%;
 		height: auto;
 		margin-right: 0;
+		margin-left: 5%;
 	}
 	.home-official .gallery .item:nth-child(3n) {
 		margin-right: 0;

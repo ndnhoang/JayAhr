@@ -1,0 +1,45 @@
+2018-07-11T08:12:14+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /var/www/html/jayahr/wp-content/themes/jayahr/functions.php:378
+Stack trace:
+#0 /var/www/html/jayahr/wp-includes/class-wp-hook.php(286): load_more_product('')
+#1 /var/www/html/jayahr/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/jayahr/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/jayahr/wp-admin/admin-ajax.php(99): do_action('wp_ajax_load_mo...')
+#4 {main}
+  thrown
+
+2018-07-11T08:12:15+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /var/www/html/jayahr/wp-content/themes/jayahr/functions.php:378
+Stack trace:
+#0 /var/www/html/jayahr/wp-includes/class-wp-hook.php(286): load_more_product('')
+#1 /var/www/html/jayahr/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/jayahr/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/jayahr/wp-admin/admin-ajax.php(99): do_action('wp_ajax_load_mo...')
+#4 {main}
+  thrown
+
+2018-07-11T08:12:17+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /var/www/html/jayahr/wp-content/themes/jayahr/functions.php:378
+Stack trace:
+#0 /var/www/html/jayahr/wp-includes/class-wp-hook.php(286): load_more_product('')
+#1 /var/www/html/jayahr/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/jayahr/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/jayahr/wp-admin/admin-ajax.php(99): do_action('wp_ajax_load_mo...')
+#4 {main}
+  thrown
+
+2018-07-11T08:12:18+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /var/www/html/jayahr/wp-content/themes/jayahr/functions.php:378
+Stack trace:
+#0 /var/www/html/jayahr/wp-includes/class-wp-hook.php(286): load_more_product('')
+#1 /var/www/html/jayahr/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/jayahr/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/jayahr/wp-admin/admin-ajax.php(99): do_action('wp_ajax_load_mo...')
+#4 {main}
+  thrown
+
+2018-07-11T08:12:19+00:00 CRITICAL Uncaught Error: Call to a member function have_posts() on null in /var/www/html/jayahr/wp-content/themes/jayahr/functions.php:378
+Stack trace:
+#0 /var/www/html/jayahr/wp-includes/class-wp-hook.php(286): load_more_product('')
+#1 /var/www/html/jayahr/wp-includes/class-wp-hook.php(310): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/jayahr/wp-includes/plugin.php(453): WP_Hook->do_action(Array)
+#3 /var/www/html/jayahr/wp-admin/admin-ajax.php(99): do_action('wp_ajax_load_mo...')
+#4 {main}
+  thrown
+

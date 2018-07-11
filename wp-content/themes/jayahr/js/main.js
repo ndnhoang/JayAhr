@@ -125,6 +125,10 @@ jQuery(document).ready(function($){
                     $('.read-more').css('display', 'inline-block');    
                 } 
                 $('.loading').hide();
+            },
+            error: function() {
+              $('.loading').hide();  
+              $('.read-more').css('display', 'inline-block');
             }
         });
     });
