@@ -19,7 +19,7 @@ get_header(); ?>
 						?>
 						<div class="content-left">
 							<?php if ($image) : ?>
-								<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+								<img class="lazyload" data-origin="<?php echo $image; ?>" src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
 							<?php endif; ?>
 						</div>
 						<div class="content-right">

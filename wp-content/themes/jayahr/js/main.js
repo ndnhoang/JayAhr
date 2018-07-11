@@ -137,4 +137,9 @@ jQuery(document).ready(function($){
         e.preventDefault();
         window.history.back();
     });
+    // lazy load img
+    $("img.lazyload").lazyload({
+        effect: 'fadeIn',
+        threshold : 200
+    });
 });

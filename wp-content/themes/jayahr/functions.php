@@ -70,6 +70,7 @@ function jayahr_scripts() {
 	wp_enqueue_style( 'responsive.css', get_template_directory_uri().'/css/responsive.css' );
 
 	wp_enqueue_script( 'owl.carousel.min.js', get_template_directory_uri().'/js/owl.carousel.min.js',array('jquery'), '3.8', true );
+	wp_enqueue_script( 'jquery.lazyload.min.js', get_template_directory_uri().'/js/jquery.lazyload.min.js',array('jquery'), '3.8', true );
 	wp_enqueue_script( 'main.js', get_template_directory_uri().'/js/main.js',array('jquery'), '3.8', true );
 }
 add_action( 'wp_enqueue_scripts', 'jayahr_scripts' );
@@ -341,7 +342,7 @@ add_action('woocommerce_before_shop_loop_item_title', 'woocommerce_custom_templa
 if (!function_exists('woocommerce_custom_template_loop_product_thumbnail')) {
 	function woocommerce_custom_template_loop_product_thumbnail() {
 		$image = wp_get_attachment_image_src( get_post_thumbnail_id(get_the_ID()), 'single-post-thumbnail' );
-		echo '<img src="'.$image[0].'" alt="">';
+		echo '<img class="lazyload" data-origin="'.$image[0].'" src="'.$image[0].'" alt="">';
 	}
 }
 if (!function_exists('load_more_product')) {

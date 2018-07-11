@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="content-left">
 					<h2><?php echo $title; ?></h2>
 					<?php if ($image) : ?>
-						<img src="<?php echo $image; ?>" alt="">
+						<img class="lazyload" data-origin="<?php echo $image; ?>" src="<?php echo $image; ?>" alt="">
 					<?php endif; ?>
 					<div class="desc"><?php echo $content_left; ?></div>
 				</div>

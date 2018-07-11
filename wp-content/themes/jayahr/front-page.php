@@ -77,7 +77,7 @@ get_header(); ?>
 					if ($gallery) : ?>
 						<div class="gallery">
 							<?php foreach ($gallery as $item) : ?>
-								<div class="item"><img src="<?php echo $item['url']; ?>" alt=""></div>
+								<div class="item"><img class="lazyload" data-origin="<?php echo $item['url']; ?>" src="<?php echo $item['url']; ?>" alt=""></div>
 							<?php endforeach; ?>
 						</div>
 						<a class="read-more" href="<?php echo ($link) ? $link : '#'; ?>">Load more</a>

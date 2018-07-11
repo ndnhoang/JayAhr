@@ -20,7 +20,7 @@ get_header(); ?>
 						<div class="item">
 							<?php if ($image) : ?>
 								<div class="thumb">
-									<img src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
+									<img class="lazyload" data-origin="<?php echo $image; ?>" src="<?php echo $image; ?>" alt="<?php echo $title; ?>">
 								</div>
 							<?php endif; ?>
 							<?php if ($title || $sub_title || $description) : ?>

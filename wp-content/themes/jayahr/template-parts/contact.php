@@ -10,7 +10,7 @@ get_header(); ?>
 	<div class="contact-page">
 		<?php $thumb = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID()) ); 
 		if ($thumb) : ?>
-			<div class="banner"><img src="<?php echo $thumb; ?>" alt="banner"></div>
+			<div class="banner"><img class="lazyload" data-origin="<?php echo $thumb; ?>" src="<?php echo $thumb; ?>" alt="banner"></div>
 			<div class="contact">
 				<div class="container">
 					<h2><?php echo get_the_title(); ?></h2>
