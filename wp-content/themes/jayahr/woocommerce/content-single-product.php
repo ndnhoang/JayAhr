@@ -32,8 +32,8 @@ if ( post_password_required() ) {
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
 	<div class="container">
 		<div class="summary entry-summary">
-			<a href="#" class="go-back"><img src="<?php echo get_stylesheet_directory_uri().'/images/back-icon.png'; ?>" alt="back"></a>
-			<a href="#" class="close"><img src="<?php echo get_stylesheet_directory_uri().'/images/close-icon.png'; ?>" alt="close"></a>
+			<a href="#" class="go-back action-btn"><img src="<?php echo get_stylesheet_directory_uri().'/images/back-icon.png'; ?>" alt="back"></a>
+			<a href="#" class="close action-btn"><img src="<?php echo get_stylesheet_directory_uri().'/images/close-icon.png'; ?>" alt="close"></a>
 			<?php
 				/**
 				 * Hook: woocommerce_single_product_summary.

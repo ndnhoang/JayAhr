@@ -40,10 +40,12 @@ jQuery(document).ready(function($){
     });
     // click change image 
     $('.gallery-product .carousel-gallery .item').on('click', function() {
+        $('.gallery-product .carousel-gallery .item').removeClass('active');
+        $(this).addClass('active');
         var image_medium = $(this).data('medium');
         var item = $(this).data('item');
         $('.gallery-product .image').attr('data-item', item);
-        $('.gallery-product .image > img').attr('src', image_medium);
+        $('.gallery-product .image > img').fadeOut(0).attr('src', image_medium).fadeIn(500);
     });
     // gallery product zoom slider
     $('.carousel-zoom-gallery .owl-carousel').owlCarousel({
@@ -59,7 +61,7 @@ jQuery(document).ready(function($){
     });
     // close gallery product zoom slider
     $('.carousel-zoom-gallery .zoom-close').on('click', function() {
-        $('.carousel-zoom-gallery').css({'z-index' : '-1', 'opacity' : '0'});
+        $('.carousel-zoom-gallery').css({'transform' : 'scale(0, 0)'});
     });
     // open gallery product zoom slider
     $('.gallery-product .image .zoom').on('click', function() {
@@ -67,7 +69,7 @@ jQuery(document).ready(function($){
         item = parseInt(item);
         item -= 1;
         $('.carousel-zoom-gallery .owl-carousel').trigger('to.owl.carousel', item);
-        $('.carousel-zoom-gallery').css({'z-index' : '1', 'opacity' : '1'});
+        $('.carousel-zoom-gallery').css({'transform' : 'scale(1, 1)'});
     });
     $('.carousel-zoom-gallery .owl-carousel').on('changed.owl.carousel',function(property){
         var current = property.item.index;
@@ -91,5 +93,44 @@ jQuery(document).ready(function($){
         var parent = $(this).parent();
         var sub_menu = parent.find('.sub-menu:first');
         sub_menu.slideToggle();
+    });
+    $('.woocommerce .loading').on('click', function(e) {
+        e.preventDefault();
+    });
+    $('.woocommerce .read-more').on('click', function(e) {
+        e.preventDefault();
+        var pages = $(this).data('pages');
+        var page = $(this).attr('data-page');
+        page = parseInt(page);
+        var cat = $(this).data('cat');
+        var keyword = $(this).data('keyword');
+        page += 1;
+        $.ajax({
+            type:'POST',            
+            url:"/jayahr/wp-admin/admin-ajax.php",
+            data:{
+                'action' : 'load_more_product',
+                'page'   : page,
+                'cat'    :  cat,
+                'keyword': keyword
+            },
+            beforeSend: function() {
+                $('.read-more').hide();
+                $('.loading').css('display', 'inline-block');
+            },
+            success:function(data){
+                $('.woocommerce ul.products').append(data);
+                $('.woocommerce .read-more').attr('data-page', page);
+                if (pages > page) {
+                    $('.read-more').css('display', 'inline-block');    
+                } 
+                $('.loading').hide();
+            }
+        });
+    });
+    // go back
+    $('.go-back').on('click', function(e) {
+        e.preventDefault();
+        window.history.back();
     });
 });
