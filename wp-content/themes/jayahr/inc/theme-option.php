@@ -131,15 +131,15 @@ if ( ! class_exists( 'jayahr_options' ) ) {
 				'icon'   => 'el-icon-home',
 				'fields' => array(		
 					array(
-						'id'       => 'hotline',
+						'id'       => 'fax',
 						'type'     => 'text',
-						'title'    => __( 'Hotline', 'jayahr' ),
-						'desc'     => __( 'Hotline company', 'jayahr' ),
+						'title'    => __( 'Fax', 'jayahr' ),
+						'desc'     => __( 'Fax company', 'jayahr' ),
 					),array(
 						'id'       => 'phone',
 						'type'     => 'text',
 						'title'    => __( 'Phone', 'jayahr' ),
-						'desc'     => __( 'Hotline company', 'jayahr' ),
+						'desc'     => __( 'Phone company', 'jayahr' ),
 					),			
 					array(
 						'id'       => 'address',
@@ -154,27 +154,7 @@ if ( ! class_exists( 'jayahr_options' ) ) {
 						'desc'     => __( 'Email company', 'jayahr' ),
 					),
 				)
-	    	); 			
-	    	// Account Section
-			$this->sections[] = array(
-				'title'  => __( 'Account settings', 'jayahr' ),
-				'desc'   => __( 'All of settings for account on this theme.', 'jayahr' ),
-				'icon'   => 'el-icon-home',
-				'fields' => array(					
-					array(
-						'id'       => 'vip-message',
-						'type'     => 'textarea',
-						'title'    => __( 'Buy VIP message', 'jayahr' ),
-						'desc'     => __( 'Message will be appear in popup', 'jayahr' ),
-					),
-					array(
-						'id'       => 'currency',
-						'type'     => 'text',
-						'title'    => __( 'One beer', 'jayahr' ),
-						'desc'     => __( '1 beer = ...', 'jayahr' ),
-					),
-				)
-	    	); 
+	    	); 	
 	    	//socail links
 	    	$this->sections[] = array(
 				'title'  => __( 'Socical Links', 'jayahr' ),
