@@ -39,6 +39,9 @@ define('DB_COLLATE', '');
 
 define('FS_METHOD', 'direct');
 
+define('WP_HOME','http://118.69.62.13/jayahr');
+define('WP_SITEURL','http://118.69.62.13/jayahr');
+
 
 
 /**#@+

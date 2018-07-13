@@ -5,8 +5,8 @@
  * @package jayahr
  */
 
-update_option( 'siteurl', 'http://192.168.0.117/jayahr/' );
-update_option( 'home', 'http://192.168.0.117/jayahr/' );
+update_option( 'siteurl', 'http://118.69.62.13/jayahr/' );
+update_option( 'home', 'http://118.69.62.13/jayahr/' );
 
 if ( ! function_exists( 'jayahr_setup' ) ) :
 	function jayahr_setup() {
