@@ -79,10 +79,6 @@ add_action( 'wp_enqueue_scripts', 'jayahr_scripts' );
  */
 require get_template_directory() . '/inc/theme-option.php';
 /**
- * widgets
- */
-require get_template_directory() . '/inc/widgets.php';
-/**
  * BFI_Thumb
  */
 require get_template_directory() . '/BFI_Thumb.php';

@@ -1,8 +1,8 @@
 <?php
 /**
- * @link https://arrowicode.com
- * @package arrowicode
- * @author vietsmiler
+ * @link http://www.nlstech.net/
+ * @package jayahr
+ * @author NLS Team
  */
 get_header();?>
 

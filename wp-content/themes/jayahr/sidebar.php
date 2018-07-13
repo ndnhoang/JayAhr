@@ -1,9 +1,8 @@
 <?php
 /**
- * Template Name: Home
- * @link https://arrowicode.com
- * @author Vietsmiler
- * @package Arrowicode
+ * @link http://www.nlstech.net/
+ * @package jayahr
+ * @author NLS Team
  */
 get_header();
 
