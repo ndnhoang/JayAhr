@@ -535,6 +535,10 @@
 	.embroidery .content .content-right .desc {
 		text-align: left;
 	}
+	.error404 main img {
+		max-width: 300px;
+		margin: 10px auto 50px auto;
+	}
 }
 @media screen and (max-width: 568px) {
 	.home-sec-1 .sec-content .desc, .home-sec-2 .sec-content .desc {
@@ -835,6 +839,12 @@
 	.story .timeline .information h4 {
 		font-size: 20px;
 	}
+	.error404 main {
+		padding-bottom: 30px;
+	}
+	.error404 main img {
+		max-width: 250px;
+	}
 }
 @media screen and (max-width: 384px) {
 	.home-sec-1 .sec-content {
@@ -977,5 +987,9 @@
 	}
 	.search .woocommerce ul.products.columns-3 li.product :nth-child(3n) {
 		margin-right: 0;
+	}
+	.error404 main img {
+		max-width: 200px;
+		margin-bottom: 30px;
 	}
 }
