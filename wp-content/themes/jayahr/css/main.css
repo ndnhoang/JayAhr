@@ -3,6 +3,7 @@ body {
 	font-family: Arial, sans-serif;
 	font-size: 10px;
 	font-weight: 400;
+	font-style: normal;
 }
 a, a:hover, a:focus {
 	text-decoration: none;
