@@ -36,7 +36,7 @@ $item_in_cart = $woocommerce->cart->cart_contents_count;
                 <span class="menu-close"><img src="<?php echo get_stylesheet_directory_uri().'/images/close-icon.png' ?>" alt="close"></span>
                 <li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Shop</a></li>
                 <li><a href="<?php echo $cart_url; ?>"><span class="item-cart"><?php echo $item_in_cart; ?></span> Items</a></li>
-                <li><a href="#">Login</a></li>
+                <li><a href="#" class="login">Login</a></li>
               </ul>
               <?php wp_nav_menu( array(
                    'theme_location' => 'primary',
@@ -48,7 +48,7 @@ $item_in_cart = $woocommerce->cart->cart_contents_count;
             <ul class="user-menu">
               <li><a href="<?php echo get_permalink( woocommerce_get_page_id( 'shop' ) ); ?>">Shop</a></li>
               <li><a href="<?php echo $cart_url; ?>"><span class="item-cart"><?php echo $item_in_cart; ?></span> Items</a></li>
-              <li><a href="#">Login</a></li>
+              <li><a href="#" class="login">Login</a></li>
             </ul>
             <h1 id="logo"><a href="<?php echo home_url(); ?>"><img src="<?php echo $logo['url']; ?>" alt="Jay Ahr"></a></h1>
             <div class="search-form">

@@ -39,6 +39,39 @@ $copyright  = $jayahr_option['copyright'];
 	      			</div>
 	      		</div>
             </footer>
+            <div id="login_form">
+            	<h3>Login</h3>
+            	<span class="close"><img src="<?php echo get_stylesheet_directory_uri().'/images/close-icon.png' ?>" alt="close"></span>
+            	<div class="form-content">
+            		<div class="form-group form-input">
+            			<label>Username</label>
+            			<div class="form-control">
+            				<input type="text" name="username" placeholder="Type your username">
+            				<img class="normal" src="<?php echo get_stylesheet_directory_uri().'/images/user.png'; ?>" alt="username">
+            				<img class="focus" src="<?php echo get_stylesheet_directory_uri().'/images/user-black.png'; ?>" alt="username">
+            			</div>
+            		</div>
+            		<div class="form-group form-input">
+            			<label>Password</label>
+            			<div class="form-control">
+            				<input type="password" name="password" placeholder="Type your password">
+            				<img class="normal" src="<?php echo get_stylesheet_directory_uri().'/images/key.png'; ?>" alt="password">
+            				<img class="focus" src="<?php echo get_stylesheet_directory_uri().'/images/key-black.png'; ?>" alt="password">
+            			</div>
+            		</div>
+            		<div class="forgot-group">
+            			<a href="#">Forgot password?</a>
+            		</div>
+            		<div class="form-group">
+            			<button type="submit">LOGIN</button>
+            		</div>
+            		<div class="register-group">
+            			<span>Or Sign Up Using</span>
+            			<a href="#">SIGN UP</a>
+            		</div>
+            	</div>
+            </div>
+            <div id="overlay"></div>
         </div>
         <?php wp_footer(); ?>
     </body>

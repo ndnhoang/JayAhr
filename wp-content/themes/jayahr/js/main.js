@@ -142,4 +142,14 @@ jQuery(document).ready(function($){
         effect: 'fadeIn',
         threshold : 200
     });
+    // login
+    // $('.user-menu .login').on('click', function(e) {
+    //     e.preventDefault();
+    //     $('#overlay').fadeIn('fast');
+    //     $('#login_form').fadeIn('fast');
+    // });
+    // $('#overlay, #login_form .close').on('click', function() {
+    //     $('#overlay').fadeOut('fast');
+    //     $('#login_form').fadeOut('fast');
+    // });
 });
