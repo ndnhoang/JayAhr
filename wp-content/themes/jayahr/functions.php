@@ -5,6 +5,7 @@
  * @package jayahr
  */
 
+
 if ( ! function_exists( 'jayahr_setup' ) ) :
 	function jayahr_setup() {
 		add_theme_support( 'automatic-feed-links' );
