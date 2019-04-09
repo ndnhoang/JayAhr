@@ -5,9 +5,6 @@
  * @package jayahr
  */
 
-update_option( 'siteurl', 'http://118.69.62.13/jayahr/' );
-update_option( 'home', 'http://118.69.62.13/jayahr/' );
-
 if ( ! function_exists( 'jayahr_setup' ) ) :
 	function jayahr_setup() {
 		add_theme_support( 'automatic-feed-links' );
@@ -123,7 +120,7 @@ function my_acf_init() {
 add_action('acf/init', 'my_acf_init');
 // fix woocommerce lastest
 function mytheme_add_woocommerce_support() {
-add_theme_support( 'woocommerce' );
+	add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 // remove hook woocommerce_before_main_content

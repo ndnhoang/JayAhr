@@ -3,7 +3,7 @@
  * Plugin Name: WooCommerce
  * Plugin URI: https://woocommerce.com/
  * Description: An eCommerce toolkit that helps you sell anything. Beautifully.
- * Version: 3.4.3
+ * Version: 3.5.7
  * Author: Automattic
  * Author URI: https://woocommerce.com
  * Text Domain: woocommerce
@@ -11,7 +11,6 @@
  *
  * @package WooCommerce
  */
-
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
@@ -41,5 +40,3 @@ function wc() {
 
 // Global for backwards compatibility.
 $GLOBALS['woocommerce'] = wc();
-
-

@@ -31,7 +31,7 @@ get_header(); ?>
 								</div>
 							<?php endif; ?>
 						</div>
-						<div class="contact-form"><?php echo do_shortcode('[contact-form-7 id="153" title="Contact"]'); ?></div>
+						<div class="contact-form"><?php echo do_shortcode('[contact-form-7 id="262" title="Contact"]'); ?></div>
 					</div>
 				</div>
 			</div>

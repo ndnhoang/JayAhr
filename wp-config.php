@@ -26,7 +26,7 @@ define('DB_NAME', 'jayahr2');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '12345');
+define('DB_PASSWORD', 'nlstech888');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -39,8 +39,6 @@ define('DB_COLLATE', '');
 
 define('FS_METHOD', 'direct');
 
-define('WP_HOME','http://118.69.62.13/jayahr');
-define('WP_SITEURL','http://118.69.62.13/jayahr');
 
 
 
